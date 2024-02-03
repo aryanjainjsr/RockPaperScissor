@@ -1,6 +1,10 @@
 
 let compmove='';
-let score = JSON.parse(localStorage.getItem('score'));
+let score = JSON.parse(localStorage.getItem('score')) ||{
+        win:0,
+        loses:0,
+        tie:0
+    };
 
 updatescoreele();
 
@@ -9,11 +13,7 @@ function updatescoreele(){
 }
 
 if(score===null){
-    score={
-        win:0,
-        loses:0,
-        tie:0
-    }
+    
 }
 
 function rand(){
